@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5306D9DE-D626-408D-B13B-2AACD747F851}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Comic</RootNamespace>
+    <AssemblyName>Comic</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CommonUtilss.cs" />
+    <Compile Include="Common\Container.cs" />
+    <Compile Include="Common\ControlThreadActionHelper.cs" />
+    <Compile Include="Common\FileUtil.cs" />
+    <Compile Include="Common\ImageSetUtil.cs" />
+    <Compile Include="Common\ItemMap.cs" />
+    <Compile Include="Common\Resize\IResizeControl.cs" />
+    <Compile Include="Common\Resize\ResizeControlRecord.cs" />
+    <Compile Include="Common\Resize\ResizeUtil.cs" />
+    <Compile Include="Config\DownloadFlag.cs" />
+    <Compile Include="Config\DynamicConfig.cs" />
+    <Compile Include="Config\SysConfig.cs" />
+    <Compile Include="Data\baseData\BaseDAO.cs" />
+    <Compile Include="Data\DAO\NewComicLogDAO.cs" />
+    <Compile Include="Data\DAO\SettingDAO.cs" />
+    <Compile Include="Data\Entity\NewComicLogEntity.cs" />
+    <Compile Include="Data\Entity\SettingEntity.cs" />
+    <Compile Include="Data\Impl\NewComicLogDaoImpl.cs" />
+    <Compile Include="Data\Impl\SettingDaoImpl.cs" />
+    <Compile Include="Enums\TreeImageEnums.cs" />
+    <Compile Include="ExceptionHandle\CustomException\VaildationException.cs" />
+    <Compile Include="ExceptionHandle\EventCatchHandle.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Business\ViewImageBO.cs" />
+    <Compile Include="Model\ControllerView\StartViewCV.cs" />
+    <Compile Include="Model\ControllerView\DownLoadLogCV.cs" />
+    <Compile Include="Model\ControllerView\ViewImageCV.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register\MenuItem\MenuItemReg.cs" />
+    <Compile Include="StartView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartView.designer.cs">
+      <DependentUpon>StartView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartView2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartView2.designer.cs">
+      <DependentUpon>StartView2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Download.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewController\Download.Designer.cs">
+      <DependentUpon>Download.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\ImageFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewController\ImageFolder.Designer.cs">
+      <DependentUpon>ImageFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\ImageShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewController\ImageShow.Designer.cs">
+      <DependentUpon>ImageShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewController\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\TestItem1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewController\TestItem1.Designer.cs">
+      <DependentUpon>TestItem1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="StartView.resx">
+      <DependentUpon>StartView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartView2.resx">
+      <DependentUpon>StartView2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewController\Download.resx">
+      <DependentUpon>Download.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewController\ImageFolder.resx">
+      <DependentUpon>ImageFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewController\ImageShow.resx">
+      <DependentUpon>ImageShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewController\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewController\TestItem1.resx">
+      <DependentUpon>TestItem1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\x86\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\directory.jpg" />
+    <Content Include="Images\directoryOpen.jpg" />
+    <Content Include="Images\page.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KomikCrawler\KomikCrawler.csproj">
+      <Project>{0fd9e6c4-3c06-41e6-8fc1-a43e06d38a29}</Project>
+      <Name>KomikCrawler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

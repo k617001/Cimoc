@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comic", "Comic\Comic.csproj", "{5306D9DE-D626-408D-B13B-2AACD747F851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomikCrawler", "KomikCrawler\KomikCrawler.csproj", "{0FD9E6C4-3C06-41E6-8FC1-A43E06D38A29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5306D9DE-D626-408D-B13B-2AACD747F851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5306D9DE-D626-408D-B13B-2AACD747F851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5306D9DE-D626-408D-B13B-2AACD747F851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5306D9DE-D626-408D-B13B-2AACD747F851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD9E6C4-3C06-41E6-8FC1-A43E06D38A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD9E6C4-3C06-41E6-8FC1-A43E06D38A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD9E6C4-3C06-41E6-8FC1-A43E06D38A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD9E6C4-3C06-41E6-8FC1-A43E06D38A29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

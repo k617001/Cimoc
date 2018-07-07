@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FD9E6C4-3C06-41E6-8FC1-A43E06D38A29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KomikCrawler</RootNamespace>
+    <AssemblyName>KomikCrawler</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Common\CommonUtil.cs" />
+    <Compile Include="Common\Helper\ConvertObject\ConvertObject.cs" />
+    <Compile Include="Common\Helper\ConvertObject\Factory\TypeFactory.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\base\ITypeObject.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\BoolNullType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\BoolType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\CharType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\DateTimeNullType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\DateTimeType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\DecimalNullType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\DecimalType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\DoubleNullType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\DoubleType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\IntNullType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\IntType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\LongNullType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\LongType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\ShortNullType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\ShortType.cs" />
+    <Compile Include="Common\Helper\ConvertObject\TypeObject\StringType.cs" />
+    <Compile Include="Common\Helper\CSVLoad\CSVLoadConvert.cs" />
+    <Compile Include="Common\Helper\CSVLoad\CSVLoadHelper.cs" />
+    <Compile Include="Common\Helper\CSVLoad\Sample.cs" />
+    <Compile Include="Common\Util\SerializationUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\ComicAction.cs" />
+    <Compile Include="Src\ComicDownload.cs" />
+    <Compile Include="Src\ComicImage.cs" />
+    <Compile Include="Src\ComicMessage\ConsoleMessage.cs" />
+    <Compile Include="Src\ComicMessage\IMessage.cs" />
+    <Compile Include="ValueObject\ComicSetting.cs" />
+    <Compile Include="ValueObject\ComicUrls.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
